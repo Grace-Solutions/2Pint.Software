@@ -94,8 +94,8 @@
 #Requires -RunAsAdministrator
 [CmdletBinding(SupportsShouldProcess)]
 param(
-    [Parameter(Mandatory)] [ValidateNotNullOrEmpty()] [System.String] $LicenseKey,
-    [System.String[]] $AdditionalNames,
+    [Parameter(Mandatory = $False)] [ValidateNotNullOrEmpty()] [System.String] $LicenseKey = '',
+    [System.String[]] $AdditionalNames = @(''),
     [ValidateNotNullOrEmpty()] [System.String] $ServiceUrl = 'https://api.service.2pintsoftware.com/',
     [ValidateRange(1, 89)] [System.Int32] $RenewDays = 30,
     [ValidateNotNullOrEmpty()] [System.String] $FriendlyName = 'iPXE HTTPS Boot Certificate',
